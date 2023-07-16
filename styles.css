@@ -6,7 +6,7 @@
 }
 html,
 body {
-	background: linear-gradient(45deg, #190f2c, #200b30);
+	background: linear-gradient(45deg, #000000, #2f2f2f);
 	padding: 15px;
 }
 img {
@@ -47,3 +47,64 @@ img {
 	grid-row: span 2;
 }
 
+* {
+	box-sizing: border-box;
+  }
+  
+  :root {
+	--gold: #ffb338;
+	--light-shadow: #77571d;
+	--dark-shadow: #3e2904;
+  }
+  body {
+	margin: 0;
+  }
+  .wrapper {
+	display: grid;
+	grid-template-areas: 'overlap';
+	place-content: center;
+	text-transform: uppercase;
+	height: 50vh;
+  }
+  .wrapper > div {
+	background-clip: text;  
+	-webkit-background-clip: text;
+	color: #363833;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 900;
+	font-size: clamp( 3em, 18vw, 15rem);
+	grid-area: overlap;
+	letter-spacing: 1px;
+	-webkit-text-stroke: 4px transparent;
+  }
+  div.bg {
+	background-image: repeating-linear-gradient( 105deg, 
+	  var(--gold) 0% , 
+	  var(--dark-shadow) 5%,
+	  var(--gold) 12%);
+	color: transparent;
+	filter: drop-shadow(5px 15px 15px black);
+	transform: scaleY(1.05);
+	transform-origin: top;
+  }
+  div.fg{
+	background-image: repeating-linear-gradient( 5deg,  
+	  var(--gold) 0% , 
+	  var(--light-shadow) 23%, 
+	  var(--gold) 31%);
+	color: #2f2f2f;
+	transform: scale(1);
+  }
+  @media screen and (max-width: 767px) {
+	/* Voeg hier de stijlen toe voor schermen kleiner dan 768 pixels (bijv. telefoons) */
+  
+	.grid-wrapper {
+	  /* Aanpassen van grid-template-columns om kolombreedte aan te passen */
+	  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+	}
+  
+	.wrapper {
+	  /* Plaats de inhoud van de wrapper in het midden van het scherm */
+	  align-items: center;
+	}
+  }
