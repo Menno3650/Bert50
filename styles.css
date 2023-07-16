@@ -106,6 +106,6 @@ img {
 	.wrapper {
 	  /* Plaats de inhoud van de wrapper in het midden van het scherm */
 	  align-items: center;
-	  height: 10vh;
+	  height: 20vh;
 	}
   }
