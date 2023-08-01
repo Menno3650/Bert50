@@ -6,8 +6,8 @@
 }
 html,
 body {
-	background: linear-gradient(45deg, #000000, #2f2f2f);
-	padding: 15px;
+	background: linear-gradient(45deg, #000000, #0d0d0d);
+	padding: 10px;
 }
 img {
 	max-width: 100%;
@@ -52,9 +52,9 @@ img {
   }
   
   :root {
-	--gold: #ffb338;
-	--light-shadow: #77571d;
-	--dark-shadow: #3e2904;
+	--gold: #ff0000;
+	--light-shadow: #7f1616;
+	--dark-shadow: #3e0404;
   }
   body {
 	margin: 0;
@@ -92,7 +92,7 @@ img {
 	  var(--gold) 0% , 
 	  var(--light-shadow) 23%, 
 	  var(--gold) 31%);
-	color: #2f2f2f;
+	color: #ff0000;
 	transform: scale(1);
   }
   @media screen and (max-width: 767px) {
@@ -106,6 +106,7 @@ img {
 	.wrapper {
 	  /* Plaats de inhoud van de wrapper in het midden van het scherm */
 	  align-items: center;
-	  height: 20vh;
+	  margin-top: 1vh;
+	  height: 15vh;
 	}
   }
