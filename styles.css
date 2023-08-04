@@ -111,10 +111,11 @@ img {
 	}
   }
 img {
-    transition:transform 0.25s ease;
+        transition: transform 0.25s ease;
 }
 
+/* De hover-stijl die wordt toegepast wanneer de muis over de afbeelding beweegt */
 img:hover {
-    -webkit-transform:scale(2); /* or some other value */
-    transform:scale(2);
-}
+    transform: scale(1.2); /* Schaal de afbeelding 2x en verplaats naar het midden */
+
+	}
