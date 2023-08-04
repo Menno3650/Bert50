@@ -119,6 +119,5 @@ img:hover {
     position: fixed;
     top: 0px;
     left: 0px;
-	max-height: 100%;
     transform: scale(0.5); /* Hier kun je de schaalwaarde aanpassen, 0.8 betekent 80% van de oorspronkelijke grootte */
 }
