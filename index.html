@@ -63,6 +63,26 @@
         <div class="tall">
             <img src="foto/foto14.jpg" alt="" />
         </div>
+
+
+        <div class="popup-image">
+            <span>&times;</span>
+            <img src="foto/foto1.jpg" alt="">
+        </div>
+        <script>
+
+            document.querySelectorAll('.grid-wrapper img').forEach(image =>{
+                image.onclick = () =>{
+                    document.querySelector('.popup-image').style.display = 'block';
+                    document.querySelector('.popup-image img').src = image.getAttribute('src');
+                }
+            });
+            
+            document.querySelector('.popup-image span').onclick = () =>{
+                document.querySelector('.popup-image').style.display = 'none';
+            }
+
+        </script>
         <!--
         <div>
             <img src="https://images.unsplash.com/photo-1547234935-80c7145ec969?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1353&amp;q=80" alt="" />

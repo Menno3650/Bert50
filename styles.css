@@ -110,14 +110,38 @@ img {
 	  height: 15vh;
 	}
   }
-img {
-        transition: transform 0.25s ease;
-}
 
-/* De hover-stijl die wordt toegepast wanneer de muis over de afbeelding beweegt */
-img:hover {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    transform: scale(0.5); /* Hier kun je de schaalwaarde aanpassen, 0.8 betekent 80% van de oorspronkelijke grootte */
+.grid-wrapper .popup-image{
+	position: fixed;
+	top: 0; left: 0;
+	background:rgba(0, 0, 0, 1);
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	display: none;
+}
+.grid-wrapper .popup-image span{
+	position: absolute;
+	top: 0; right: 10px;
+	font-size: 60px;
+	font-weight: bolder;
+	color: #fff;
+	cursor: pointer;
+	z-index: 100;
+
+}
+.grid-wrapper .popup-image img{
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%);
+	border: 5px solid #fff;
+	border-radius: 5px;
+	width: 750px;
+	object-fit: cover;
+}
+@media(max-width:768px) {
+	.grid-wrapper .popup-image img{
+		width: 95%;
+		height: 100%;
+	}
 }
