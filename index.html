@@ -63,25 +63,80 @@
         <div class="tall">
             <img src="foto/foto14.jpg" alt="" />
         </div>
-
+        <div>
+            <img src="foto/foto16.jpg" alt="" />
+        </div>
+        <div class="big">
+            <img src="foto/foto17.jpg" alt="" />
+        </div>
+        <div>
+            <img src="foto/foto18.jpg" alt="" />
+        </div>
+        <div class="tall">
+            <img src="foto/foto19.jpg" alt="" />
+        </div>
+        <div class="wide">
+            <img src="foto/foto20.jpg" alt="" />
+        </div>
+        <div>
+            <img src="foto/foto21.jpg" alt="" />
+        </div>
+        <div class="big">
+            <img src="foto/foto22.jpg" alt="" />
+        </div>
+        <div>
+            <img src="foto/foto23.jpg" alt="" />
+        </div>
+        <div class="tall">
+            <img src="foto/foto24.jpg" alt="" />
+        </div>
+        <div>
+            <img src="foto/foto25.jpg" alt="" />
+        </div>
+        <div class="big">
+            <img src="foto/foto26.jpg" alt="" />
+        </div>
 
         <div class="popup-image">
-            <span>&times;</span>
+            <span class="close">&times;</span>
+            <span class="prev">&#10094;</span>
+            <span class="next">&#10095;</span>
             <img src="foto/foto1.jpg" alt="">
         </div>
         <script>
-
-            document.querySelectorAll('.grid-wrapper img').forEach(image =>{
-                image.onclick = () =>{
-                    document.querySelector('.popup-image').style.display = 'block';
-                    document.querySelector('.popup-image img').src = image.getAttribute('src');
-                }
+            const images = document.querySelectorAll('.grid-wrapper img');
+            const popup = document.querySelector('.popup-image');
+            const popupImg = popup.querySelector('img');
+            const closeBtn = popup.querySelector('.close');
+            const prevBtn = popup.querySelector('.prev');
+            const nextBtn = popup.querySelector('.next');
+            let currentIndex = 0;
+        
+            images.forEach((image, index) => {
+                image.onclick = () => {
+                    currentIndex = index;
+                    updatePopupImage();
+                    popup.style.display = 'block';
+                };
             });
-            
-            document.querySelector('.popup-image span').onclick = () =>{
-                document.querySelector('.popup-image').style.display = 'none';
+        
+            closeBtn.onclick = () => {
+                popup.style.display = 'none';
+            };
+        
+            prevBtn.onclick = () => {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                updatePopupImage();
+            };
+        
+            nextBtn.onclick = () => {
+                currentIndex = (currentIndex + 1) % images.length;
+                updatePopupImage();
+            };
+        
+            function updatePopupImage() {
+                popupImg.src = images[currentIndex].getAttribute('src');
             }
-
         </script>
         <!--
         <div>

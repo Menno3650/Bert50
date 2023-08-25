@@ -119,6 +119,8 @@ img {
 	width: 100%;
 	z-index: 100;
 	display: none;
+
+	
 }
 .grid-wrapper .popup-image span{
 	position: absolute;
@@ -145,3 +147,32 @@ img {
 		height: 50%;
 	}
 }
+.grid-wrapper .popup-image .prev,
+.grid-wrapper .popup-image .next {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
+.grid-wrapper .popup-image .prev {
+    left: 20px;
+}
+
+.grid-wrapper .popup-image .next {
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
